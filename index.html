@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title> Mensagem Secreta </title>
+    <script defer src="https://pyscript.net/alpha/pyscript.js"></script>
+    <link href='style.css' rel='stylesheet'>
+</head>
+<body>
+
+<!-- write your Python code in py-script tag -->
+<py-script>
+    from js import document, alert, console
+   
+    def func(*ags, **kws):
+    
+        key =  document.getElementById('key').value;
+        msg = document.getElementById('msg').value;
+
+        letters = list('1!aZb2úYcX3ódWe4íVfU5ég&Th6áSiR7àjQk8âPlO9êmNn0ôMoLçãpKqÇõJrI,sHt.GuF:vEw;DxC()yBz-A ?')
+        l_key = len(key)
+
+        enc = []
+        j = 0
+
+        for i in msg:
+            
+            if j >= l_key:
+                j = 0
+            
+            aux = (letters.index(i) - letters.index(key[j]) - 1)%len(letters)
+            enc.append(letters[aux])
+            j+=1
+
+        result =  "".join(enc)
+        console.log('sex', result)
+        pyscript.write("Result", result) 
+
+</py-script>    
+
+        
+    <center>
+        <h1>Decodificador de Mensagens</h1>
+        <br/>
+        <h2>Insira a chave de decriptação:</h2>
+        <input id="key" type="text">
+        <br><br/><br/>
+        <h2>Insira a mensagem:</h2>
+        <textarea id="msg"></textarea>
+        <br/>
+        <button id="convert" type="submit"  class="btn btn-info" pys-onClick="func">Convert</button>
+        
+        <h1>Result:</h1>
+        <textarea id="Result" class="form-control" rows="20" aria-label="Large" aria-describedby="inputGroup-sizing-sm" placeholder="Result"></textarea>
+
+    </center>
+
+    </body>
+    </html>    
