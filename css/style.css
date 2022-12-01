@@ -14,7 +14,6 @@ body {
     color: #ffffff;
 }
 
-
 header{
     width: 100vw;
     height: 100px;
@@ -24,7 +23,7 @@ header{
 }
 
 header .inner{
-    width: 1300px; /* This is the inner width of the content inside of your header (80%, etc) */
+    width: 1250px; /* This is the inner width of the content inside of your header (80%, etc) */
     height: 100%;
     display: block;
     margin: 0 auto;
@@ -40,11 +39,8 @@ header .left-side div{
     height: 100%;
     display: table-cell;
     vertical-align: middle;
-}
-
-header .left-side img{
-    height: 50px;
-    margin-top: 5px; /* Optical alignment of the logo */
+    font-size: 25px;
+    font-family: 'Quicksand', sans-serif;
 }
 
 header nav{
@@ -70,6 +66,11 @@ header nav span {
 
 header nav a{
     color: #ffffff;
+    font-size: 25px;
+}
+
+header nav a:hover{
+    color: purple;
 }
 
 .Tittle{
