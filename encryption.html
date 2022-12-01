@@ -49,7 +49,7 @@
             if j >= l_key:
                 j = 0
             
-            aux = (letters.index(i) - letters.index(key[j]) - 1)%len(letters)
+            aux = (letters.index(i) + letters.index(key[j]) + 1)%len(letters)
             enc.append(letters[aux])
             j+=1
 
@@ -63,7 +63,7 @@
     <center>
         
         <br/>
-        <h2>Insira a chave de decriptação:</h2>
+        <h2>Insira a chave de encriptação:</h2>
         <input id="key" type="text">
         <br><br/><br/>
         <h2>Insira a mensagem:</h2>
