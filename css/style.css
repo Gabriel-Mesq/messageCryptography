@@ -7,10 +7,7 @@
 }
 
 body {
-    background-image: url(../assets/kiss.JPG);
-    background-repeat: no-repeat;
-    background-size: cover;
-    position: relative;
+    background-color: #444444;
     color: #ffffff;
 }
 
