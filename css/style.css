@@ -12,7 +12,7 @@ body {
 }
 
 header{
-    width: 100vw;
+    width: 100%;
     height: 100px;
     border-bottom: solid 1px rgba(16, 16, 16, 0.1);
     background-color: #101010;
@@ -20,7 +20,7 @@ header{
 }
 
 header .inner{
-    width: 1250px; /* This is the inner width of the content inside of your header (80%, etc) */
+    width: 90%; 
     height: 100%;
     display: block;
     margin: 0 auto;
